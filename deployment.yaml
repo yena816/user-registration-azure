@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-reg-deployment
+  labels:
+    app: userregister
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: userregister
+  template:
+    metadata:
+      labels:
+        app: userregister
+    spec:
+      containers:
+      - name: userregister
+        image: us-central1-docker.pkg.dev/stock-forecast-294203/userregister/user-reg:latest
+        ports:
+        - containerPort: 8080
