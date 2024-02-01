@@ -9,9 +9,9 @@
 <p>After the instance creates, you need to create the database. In the left menu, go to Databases and click Create Database. Set a name (in my case, I put "users") and Create. </p>
 <p>In your Spring Boot application.properties file, add your database's url, username, and password. The url should look similar to the following: </p>
 
-'''
+```
 spring.datasource.url=jdbc:mysql://<PUBLIC_IP>:3306/<DB_NAME>
-'''
+```
 
 <p>Now, when you run the application, it should automatically create a table in the database with the schema required. In this case, it creates a table called "user." </p>
 
@@ -19,9 +19,9 @@ spring.datasource.url=jdbc:mysql://<PUBLIC_IP>:3306/<DB_NAME>
 <p>You can use MySQL Workbench to query the database and make sure changes are going through. Set up the connection by adding your database's public IP address into the Hostname. Set the port to 3306 and put "root" for the username and enter your database password that you saved earlier. </p>
 <p>Once you are in the database, run the following query: </p>
 
-'''
+```
 USE <DB_NAME>;
 SELECT * FROM user;
-'''
+```
 
 <p>This should show everything that is in your table. When you run your application and input data, this is where it should be stored. You can keep running the SELECT query to check the table. </p>
