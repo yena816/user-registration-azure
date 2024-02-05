@@ -1,12 +1,10 @@
 <h1>Spring Boot</h1>
 <p>For this app, I followed this tutorial: https://youtu.be/yp_uleaOzV4?si=pimcOzQa9GEXgQvz </p>
-<p>This tutorial creates a simple Spring Boot application with a Thymeleaf form that has a connection to a MySQL database. However, for simplicity purposes, I did not implement the /users page. I also made my application.properties file connect to a GCP Cloud SQL database. The steps to create and add that database are below: </p>
+<p>This tutorial creates a simple Spring Boot application with a Thymeleaf form that has a connection to a MySQL database. However, for simplicity purposes, I did not implement the /users page. I also made my application.properties file connect to a Azure database. The steps to create and add that database are below: </p>
 
-<h1>GCP Cloud SQL</h1>
-<p>To create the instance, go to Cloud SQL in the GCP console. Click Create instance and Choose MySQL. Set a name and generate a password for your instance. Make sure to save the password somewhere so you can use it later. You can reduce the costs for your instance by setting the edition to Development instead of Production. You can keep the default settings for everything else.</p>
-<p>For our purposes, we can make the instance publicly accessible. This is not recommended in production.</p>
-<p>Add 0.0.0.0/0 to the Authorized Networks in the Connections section to allow all traffic into the instance</p>
-<p>After the instance creates, you need to create the database. In the left menu, go to Databases and click Create Database. Set a name (in my case, I put "users") and Create. </p>
+<h1>Azure Database for MySQL</h1>
+<p>To create the instance, go to Azure Database for MySQL in the Azure console. Click Create a resource. Set a name and generate a password for your instance. Make sure to save the password somewhere so you can use it later. You can keep the default settings for everything else.</p>
+<p>After the instance creates, you need to create the database. Set a name (in my case, I put "users") and Create. </p>
 <p>In your Spring Boot application.properties file, add your database's url, username, and password. The url should look similar to the following: </p>
 
 ```
